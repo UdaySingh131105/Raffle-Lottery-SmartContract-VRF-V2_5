@@ -5,6 +5,7 @@ const { assert, expect } = require("chai")
 !developmentChains.includes(network.name)
    ? describe.skip
    : describe("Raffle Unit testing", function () {
+        // unit tests for local deployments
         let vrfCoordinator, raffle, enteranceFee, interval, signer
         beforeEach(async () => {
            const accounts = await ethers.getSigners()
