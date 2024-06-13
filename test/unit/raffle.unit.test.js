@@ -258,7 +258,7 @@ const { assert, expect } = require("chai")
                        accounts[testingAccounts].address
                     )
                     await vrfCoordinator.fulfillRandomWords(requestId, raffle.target)
-                    console.log("fulfillRandomWords called")
+                    //   console.log("fulfillRandomWords called")
                  } catch (error) {
                     console.error("Error during performUpkeep or fulfillRandomWords:", error)
                     reject(error)
