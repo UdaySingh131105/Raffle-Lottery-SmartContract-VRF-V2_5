@@ -54,7 +54,7 @@ developmentChains.includes(network.name)
                  })
 
                  console.log("Entering Raffle....")
-                 const txResponse = await raffle.enterRaffle()
+                 const txResponse = await raffle.enterRaffle({ value: entranceFee })
                  const txReceipt = await txResponse.wait(1)
                  console.log("Waiting for the interval to pass....")
                  winnerStartingBalance = await ethers.provider.getBalance(signer.address)
